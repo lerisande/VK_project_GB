@@ -20,7 +20,6 @@ final class LoginViewController: UIViewController {
     @IBAction func facebookLoginButton(_ sender: Any) {}
     @IBAction func appleLoginButton(_ sender: Any) {}
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setViews()
@@ -34,6 +33,8 @@ final class LoginViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWasShown), name: UIResponder.keyboardWillShowNotification, object: nil)
         // Второе — когда она пропадает
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillBeHidden(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
+        navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -43,21 +44,24 @@ final class LoginViewController: UIViewController {
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
+    
+    @IBAction func myUnwindAction (_ unwindSegue: UIStoryboardSegue) {}
+    
     @IBAction private func loginButtonPressed(_ sender: UIButton) {
-        // Получаем текст логина
-        guard
-            let login = loginTextField.text,
-            let password = passwordTextField.text
-        else {
-            print("Wrong login or password")
-            return
-        }
+        if loginTextField.text == "1" &&
+            passwordTextField.text == "1" {
         
-        // Проверяем, верны ли они
-        if login == "1" && password == "1" {
-            print("успешная авторизация")
+            performSegue(withIdentifier: "loginScreenSegue", sender: self)
+            
         } else {
-            print("неуспешная авторизация")
+            //создаем контроллер
+            let alert = UIAlertController(title: "Ошибка", message: "Введены неверные данные пользователя", preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            // добавляем кнопку на UIAlertController
+            alert.addAction(action)
+            // показываем UIAlertController
+            present(alert, animated: true, completion: nil)
+            
         }
     }
     
