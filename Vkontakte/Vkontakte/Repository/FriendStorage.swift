@@ -13,21 +13,21 @@ class FriendStorage {
     
     init() {
         friends = [
-            FriendModel(name: "Friend1", avatar: (UIImage(named: "woman1")!),
+            FriendModel(name: "Anna Dvorak", avatar: (UIImage(named: "woman1")!),
                         photoLibrary: friend1),
-            FriendModel(name: "Friend2", avatar: (UIImage(named: "man1")!),
+            FriendModel(name: "Nicolas Teder", avatar: (UIImage(named: "man1")!),
                         photoLibrary: friend2),
-            FriendModel(name: "Friend3", avatar: (UIImage(named: "woman2")!),
+            FriendModel(name: "Lisa Coen", avatar: (UIImage(named: "woman2")!),
                         photoLibrary: friend3),
-            FriendModel(name: "Friend4", avatar: (UIImage(named: "man2")!),
+            FriendModel(name: "Rick Nowak", avatar: (UIImage(named: "man2")!),
                         photoLibrary: friend4),
-            FriendModel(name: "Friend5", avatar: (UIImage(named: "man3")!),
+            FriendModel(name: "Anton Kowalski", avatar: (UIImage(named: "man3")!),
                         photoLibrary: friend5),
-            FriendModel(name: "Friend6", avatar: (UIImage(named: "woman3")!),
+            FriendModel(name: "Jeni Amparo", avatar: (UIImage(named: "woman3")!),
                         photoLibrary: friend6),
-            FriendModel(name: "Friend7", avatar: (UIImage(named: "man4")!),
+            FriendModel(name: "Stephen Walczak", avatar: (UIImage(named: "man4")!),
                         photoLibrary: friend7),
-            FriendModel(name: "Friend8", avatar: (UIImage(named: "man5")!),
+            FriendModel(name: "Ted Lewandowski", avatar: (UIImage(named: "man5")!),
                         photoLibrary: friend8),
         ]
     }

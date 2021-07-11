@@ -24,13 +24,17 @@ final class FriendsController: UIViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showFriendPhotos",
-           let destinationController = segue.destination as? FriendPhotosController,
-           let indexPath = sender as? IndexPath
-        {
-            let friend = friends[indexPath.row]
-            destinationController.photoLibrary = friend.photoLibrary
-            destinationController.title = friend.name
+//        if segue.identifier == "showFriendPhotos",
+//           let destinationController = segue.destination as? FriendPhotosController,
+//           let indexPath = sender as? IndexPath
+//        {
+//            let friend = friends[indexPath.row]
+//            destinationController.photoLibrary = friend.photoLibrary
+//            destinationController.title = friend.name
+//        }
+        if segue.identifier == "showFriendPhotos" {
+            guard let destVC = segue.destination as? FriendPhotosController else { return }
+            destVC.friend = sender as? FriendModel
         }
     }
     
@@ -56,6 +60,7 @@ extension FriendsController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Нажата строка № \(indexPath.row) в секции \(indexPath.section)")
+        let friend = friends[indexPath.row]
+        performSegue(withIdentifier: "showFriendPhotos", sender: friend)
     }
 }

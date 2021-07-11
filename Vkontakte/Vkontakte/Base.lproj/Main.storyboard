@@ -199,7 +199,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="113"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vk_logo" translatesAutoresizingMaskIntoConstraints="NO" id="W5w-bR-Qyh">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="W5w-bR-Qyh">
                                                     <rect key="frame" x="20" y="17" width="80" height="80"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wsj-9y-dp8">
@@ -226,7 +226,6 @@
                                         <connections>
                                             <outlet property="friendAvatar" destination="W5w-bR-Qyh" id="fPD-Ma-r8q"/>
                                             <outlet property="friendName" destination="Wsj-9y-dp8" id="1sT-q5-yjL"/>
-                                            <segue destination="AeI-fF-TgT" kind="show" identifier="showFriendPhotos" id="LIf-mD-tFG"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -242,6 +241,7 @@
                     <navigationItem key="navigationItem" title="Мои друзья" id="m5i-w9-WHY"/>
                     <connections>
                         <outlet property="tableView" destination="Lbs-Ja-GcI" id="bf9-nM-5Ry"/>
+                        <segue destination="AeI-fF-TgT" kind="show" identifier="showFriendPhotos" id="cRl-sU-qQu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eCC-DV-BwR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -291,7 +291,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="woman1.1" translatesAutoresizingMaskIntoConstraints="NO" id="gHm-y1-gRg">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gHm-y1-gRg">
                                                     <rect key="frame" x="18" y="20" width="113" height="100"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="100" id="qp4-ez-fcv"/>
@@ -357,7 +357,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="113"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vk_logo" translatesAutoresizingMaskIntoConstraints="NO" id="Tq7-e6-tFs">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tq7-e6-tFs">
                                                     <rect key="frame" x="20" y="24" width="65" height="65"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="65" id="WeU-Eo-ATA"/>
@@ -438,7 +438,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="113"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vk_logo" translatesAutoresizingMaskIntoConstraints="NO" id="fvD-DI-IGD">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fvD-DI-IGD">
                                                     <rect key="frame" x="20" y="24" width="65" height="65"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="65" id="DHq-6v-GSi"/>
@@ -505,7 +505,6 @@
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="vk_logo" width="2000" height="2000"/>
-        <image name="woman1.1" width="512" height="512"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
