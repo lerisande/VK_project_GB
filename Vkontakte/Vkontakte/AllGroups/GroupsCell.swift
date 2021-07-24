@@ -1,0 +1,62 @@
+//
+//  AllGroupsCell.swift
+//  Vkontakte
+//
+//  Created by Lera on 22.07.21.
+//
+
+import UIKit
+
+final class GroupsCell: UITableViewCell {
+    
+    static let reuseIdentifier = "GroupsCell"
+    
+    @IBOutlet var groupAvatar: UIImageView!{
+        didSet {
+            // включаем поддержку тапа
+            groupAvatar.isUserInteractionEnabled = true
+            // настраиваем распознаватель тапа по аватару
+            let tapRecognizer = UITapGestureRecognizer(target: self,
+                                                       action: #selector(animateAvatar))
+            groupAvatar.addGestureRecognizer(tapRecognizer)
+        }
+    }
+    @IBOutlet var groupName: UILabel!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        setupView()
+    }
+    
+    ///  Конфигурация ячейки
+    /// - Parameter group: Модель группы
+    func configure(group: GroupModel) {
+        groupName.text = group.name
+        groupAvatar.image = group.avatar
+    }
+    
+    private func setupView() {
+        //Делаем картинку круглой
+        groupAvatar.layer.cornerRadius = groupAvatar.frame.size.width / 2
+        groupAvatar.contentMode = .scaleAspectFill
+        groupAvatar.clipsToBounds = true
+    }
+    
+    // добавляем анимацию по тапу на аватар группы
+    @objc private func animateAvatar(_ sender: UITapGestureRecognizer) {
+        
+        let animation = CASpringAnimation(keyPath: "transform.scale")
+        animation.fromValue = 0.5
+        animation.toValue = 1
+        animation.stiffness = 200
+        animation.mass = 1
+        animation.duration = 2
+        animation.fillMode = CAMediaTimingFillMode.backwards
+        
+        self.groupAvatar.layer.add(animation, forKey: nil)
+    }
+    
+}
+
+
