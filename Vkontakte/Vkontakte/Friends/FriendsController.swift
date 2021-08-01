@@ -15,7 +15,7 @@ final class FriendsController: UIViewController {
     var friendsSection = [[FriendModel]]() //массив массивов
     private var firstLetters: [String] = []
     
-    override func viewDidLoad() {
+    override func viewDidLoad() { 
         super.viewDidLoad()
         
         let friends = FriendStorage().friends.sorted(by: { $0.name < $1.name })
@@ -28,6 +28,7 @@ final class FriendsController: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.separatorStyle = .none
         
         // регистрируем header
         tableView.register(FriendHeaderSection.self,
@@ -94,6 +95,8 @@ extension FriendsController: UITableViewDataSource, UITableViewDelegate {
         }
         let friend = friendsSection[indexPath.section][indexPath.row] //сначала определяем в каком массиве находится, затем ячейку
         cell.configure(name: friend.name, image: friend.avatar)
+        cell.selectionStyle = .none
+        
         return cell
     }
     
@@ -107,6 +110,5 @@ extension FriendsController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let friend = friendsSection[indexPath.section][indexPath.row]
         performSegue(withIdentifier: "showFriendPhotos", sender: friend)
-        tableView.deselectRow(at: indexPath, animated: true)
     }
 }

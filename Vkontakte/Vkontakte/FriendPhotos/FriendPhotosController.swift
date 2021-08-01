@@ -12,6 +12,7 @@ final class FriendPhotosController: UIViewController {
     @IBOutlet var collectionView: UICollectionView!
     
     var friend: FriendModel?
+    var selectedItem: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +25,7 @@ final class FriendPhotosController: UIViewController {
         // размещение контрола на экране
         setLikeControl()
     }
-
+    
     func setLikeControl() {
         let itemSize = UIScreen.main.bounds.width/3 - 3
         let layout = UICollectionViewFlowLayout()
@@ -47,16 +48,29 @@ extension FriendPhotosController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoCell.reuseIdentifier, for: indexPath) as! PhotoCell
         guard let imageModel = friend?.photoLibrary[indexPath.item] else { return cell }
-		cell.configure(photoModel: imageModel)
+        cell.configure(photoModel: imageModel)
         // когда лайк нажат, срабатывает замыкание
-		cell.likeTapped = { [weak self] in
+        cell.likeTapped = { [weak self] in
             // у модели данных, откуда берем фотографию, меняем состояние isLiked на противоположное
-			self?.friend?.photoLibrary[indexPath.item].isLiked.toggle()
-			collectionView.reloadItems(at: [indexPath]) // обновление ячейки по тому же индексу
-		}
+            self?.friend?.photoLibrary[indexPath.item].isLiked.toggle()
+            collectionView.reloadItems(at: [indexPath]) // обновление ячейки по тому же индексу
+        }
         return cell
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showScaledPhoto",
+           let fullScreenController = segue.destination as? FullScreenPhotoController,
+           let photos = friend?.photoLibrary {
+            fullScreenController.selectedItem = selectedItem
+            // определяем нажатую ячейку и передаем ее индекс
+            fullScreenController.row = collectionView.indexPathsForSelectedItems?.last?.row
+            
+            fullScreenController.photo = photos.compactMap {$0.image}
+        }
+    }
 }
+
 
 extension FriendPhotosController: UICollectionViewDelegate {
     

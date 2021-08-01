@@ -8,36 +8,46 @@
 import UIKit
 
 class NewsController: UIViewController {
-
-    @IBOutlet var collectionView: UICollectionView!
+    
+    @IBOutlet var tableView: UITableView!
     
     var news = [NewsModel]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        news = NewsStorage().news
 
-        collectionView.delegate = self
-        collectionView.dataSource = self
+        tableView.delegate = self
+        tableView.dataSource = self
 
-        collectionView.register(UINib(nibName: NewsCell.reuseIdentifier, bundle: nil),
-                                forCellWithReuseIdentifier: NewsCell.reuseIdentifier)
+        tableView.register(UINib(nibName: NewsCell.reuseIdentifier, bundle: nil),
+                           forCellReuseIdentifier: NewsCell.reuseIdentifier)
 
     }
 }
 
-extension NewsController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension NewsController: UITableViewDelegate, UITableViewDataSource {
     
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 3
-    }
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
-    }
-
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        news.count
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NewsCell.reuseIdentifier, for: indexPath) as! NewsCell
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+//        let index = indexPath.row
+//
+//        if news[index].image.count > 1 {
+        guard
+            let cell = tableView.dequeueReusableCell(withIdentifier: NewsCell.reuseIdentifier, for: indexPath) as? NewsCell
+        else {
+            return UITableViewCell()
+        }
+        let news = news[indexPath.row]
+        cell.configure(news: news)
         return cell
     }
+    
+    
 }

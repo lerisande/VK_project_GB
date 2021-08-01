@@ -29,6 +29,14 @@ final class GroupsCell: UITableViewCell {
         setupView()
     }
     
+    /* производим изменения после того, как вся геометрия расчитана
+    (corner radius лучше высчитывать тут) */
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        groupAvatar.layer.cornerRadius = groupAvatar.frame.size.width / 2
+    }
+    
     ///  Конфигурация ячейки
     /// - Parameter group: Модель группы
     func configure(group: GroupModel) {
@@ -37,10 +45,11 @@ final class GroupsCell: UITableViewCell {
     }
     
     private func setupView() {
-        //Делаем картинку круглой
-        groupAvatar.layer.cornerRadius = groupAvatar.frame.size.width / 2
+        // настраиваем внешний вид аватара
         groupAvatar.contentMode = .scaleAspectFill
         groupAvatar.clipsToBounds = true
+        groupAvatar.layer.borderWidth = 1
+        groupAvatar.layer.borderColor = UIColor.black.cgColor
     }
     
     // добавляем анимацию по тапу на аватар группы

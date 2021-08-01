@@ -16,7 +16,12 @@ final class PhotoCell: UICollectionViewCell {
     
     @IBOutlet var friendPhoto: UIImageView!
     
+    
 	var likeControl = LikeControl()
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
 
 	override func layoutSubviews() {
 		super.layoutSubviews()
@@ -25,8 +30,6 @@ final class PhotoCell: UICollectionViewCell {
 								   width: 38,
 								   height: 28)
 		self.addSubview(likeControl)
-        showPhoto()
-        scalePhoto()
 	}
     
     // конфигурируем контрол и замыкание
@@ -40,30 +43,4 @@ final class PhotoCell: UICollectionViewCell {
 			self?.likeTapped?()
 		}
     }
-    
-    private func showPhoto() {
-        let fadeInAnimation = CABasicAnimation(keyPath: "opacity")
-            fadeInAnimation.fromValue = 0
-            fadeInAnimation.toValue = 1
-            fadeInAnimation.duration = 1
-            fadeInAnimation.beginTime = CACurrentMediaTime() + 1
-            fadeInAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
-            fadeInAnimation.fillMode = CAMediaTimingFillMode.backwards
-
-        self.friendPhoto.layer.add(fadeInAnimation, forKey: nil)
-    }
-    
-    private func scalePhoto() {
-        let animation = CASpringAnimation(keyPath: "transform.scale")
-        animation.fromValue = 0
-        animation.toValue = 1
-        animation.stiffness = 200
-        animation.mass = 2
-        animation.duration = 2
-        animation.beginTime = CACurrentMediaTime() + 1
-        animation.fillMode = CAMediaTimingFillMode.backwards
-        
-        self.friendPhoto.layer.add(animation, forKey: nil)
-    }
-
 }

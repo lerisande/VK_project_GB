@@ -1,9 +1,10 @@
 //
-//  AvatarView.swift
+//  BackgroundView.swift
 //  Vkontakte
 //
-//  Created by Lera on 14.07.21.
+//  Created by Lera on 01.08.21.
 //
+
 
 import UIKit
 
@@ -36,5 +37,6 @@ final class BackgroundView: UIView {
     }
 
 }
+
 
 
