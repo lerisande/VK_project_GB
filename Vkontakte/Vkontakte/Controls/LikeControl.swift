@@ -61,8 +61,8 @@ final class LikeControl: UIControl {
         UIView.animate(withDuration: 1,
                        delay: 1,
                        options: .curveEaseInOut,
-                       animations: {
-                        self.quantity.transform = .identity },
+                       // сброс в начальное состояние
+                       animations: { self.quantity.transform = .identity },
                        completion: nil)
     }
 }

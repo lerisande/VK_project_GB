@@ -24,35 +24,63 @@ final class LoginViewController: UIViewController {
         super.viewDidLoad()
         setViews()
         loadingAnimation()
+        
+        // добавляем анимацию движения для логотипа
+        let positionAnimation = CABasicAnimation(keyPath: "position.x")
+        
+        positionAnimation.fromValue = logoImage.frame.origin.x
+        positionAnimation.toValue = logoImage.frame.origin.x + 150
+        positionAnimation.duration = 3
+        positionAnimation.beginTime = CACurrentMediaTime() + 1
+        positionAnimation.repeatCount = .infinity
+        positionAnimation.autoreverses = true
+        positionAnimation.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
+        
+        logoImage.layer.add(positionAnimation, forKey: nil)
+        
+        // прозрачность
+        let opacityAnimation = CABasicAnimation(keyPath: #keyPath(CALayer.opacity))
+        
+        opacityAnimation.fromValue = 1
+        opacityAnimation.toValue = 0.01
+        opacityAnimation.duration = 3
+        opacityAnimation.beginTime = CACurrentMediaTime() + 1
+        opacityAnimation.repeatCount = .infinity
+        opacityAnimation.autoreverses = true
+        opacityAnimation.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
+
+        logoImage.layer.add(opacityAnimation, forKey: nil)
+        
+        
     }
     
     private func loadingAnimation() {
-        
-        let dot1 = UIView.init(frame: (CGRect(x: (self.view.bounds.width / 2 - 35), y: (self.view.bounds.height / 2 + 75), width: 15, height: 15)))
+
+        let dot1 = UIView.init(frame: CGRect(x: self.view.bounds.width / 2 - 35, y: self.view.bounds.height / 2 + 75, width: 15, height: 15))
         dot1.layer.cornerRadius = dot1.bounds.height / 2
         dot1.layer.borderColor = UIColor.white.cgColor
         dot1.backgroundColor = .white
         dot1.layer.masksToBounds = true
         dot1.layer.borderWidth = 2
-        
-        let dot2 = UIView.init(frame: (CGRect(x: (self.view.bounds.width / 2 - 10), y: (self.view.bounds.height / 2 + 75), width: 15, height: 15)))
+
+        let dot2 = UIView.init(frame: CGRect(x: self.view.bounds.width / 2 - 10, y: self.view.bounds.height / 2 + 75, width: 15, height: 15))
         dot2.layer.cornerRadius = dot2.bounds.height / 2
         dot2.layer.borderColor = UIColor.white.cgColor
         dot2.backgroundColor = .white
         dot2.layer.masksToBounds = true
         dot2.layer.borderWidth = 2
-        
-        let dot3 = UIView.init(frame: (CGRect(x: (self.view.bounds.width / 2 + 15), y: (self.view.bounds.height / 2 + 75), width: 15, height: 15)))
+
+        let dot3 = UIView.init(frame: CGRect(x: self.view.bounds.width / 2 + 15, y: self.view.bounds.height / 2 + 75, width: 15, height: 15))
         dot3.layer.cornerRadius = dot3.bounds.height / 2
         dot3.layer.borderColor = UIColor.white.cgColor
         dot3.backgroundColor = .white
         dot3.layer.masksToBounds = true
         dot3.layer.borderWidth = 2
-        
+
         self.view.addSubview(dot1)
         self.view.addSubview(dot2)
         self.view.addSubview(dot3)
-        
+
         UIView.animate(withDuration: 1,
                        delay: 0,
                        options: [.autoreverse, .repeat],
@@ -69,26 +97,6 @@ final class LoginViewController: UIViewController {
                        animations: { dot3.backgroundColor = .gray },
                        completion: nil)
     }
-
-
-//        UIView.animate(withDuration: 1.0,
-//                       delay: 0, options: [.repeat, .autoreverse],
-//                       animations: { pointView1.backgroundColor = UIColor.gray },
-//                       completion: nil)
-//
-//        UIView.animate(withDuration: 1.0,
-//                       delay: 0.33,
-//                       options: [.repeat, .autoreverse],
-//                       animations: { pointView2.backgroundColor = UIColor.gray },
-//                       completion: nil)
-//
-//        UIView.animate(withDuration: 1.0,
-//                       delay: 0.66,
-//                       options: [.repeat, .autoreverse],
-//                       animations: { pointView3.backgroundColor = UIColor.gray },
-//                       completion: nil)
-//
-//    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

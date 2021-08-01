@@ -30,6 +30,14 @@ final class FriendCell: UITableViewCell {
         
         setupView()
     }
+    
+    /* производим изменения после того, как вся геометрия расчитана
+    (corner radius лучше высчитывать тут) */
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        friendAvatar.layer.cornerRadius = friendAvatar.frame.size.width / 2
+    }
 
    func configure(name: String, image: UIImage) {
         friendAvatar.image = image
@@ -37,7 +45,6 @@ final class FriendCell: UITableViewCell {
     }
     
     private func setupView() {
-        friendAvatar.layer.cornerRadius = friendAvatar.frame.size.width / 2
         friendAvatar.contentMode = .scaleAspectFill
         friendAvatar.clipsToBounds = true
         friendAvatar.layer.borderWidth = 1

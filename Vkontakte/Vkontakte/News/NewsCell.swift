@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class NewsCell: UICollectionViewCell {
+final class NewsCell: UITableViewCell {
     
     static let reuseIdentifier = "NewsCell"
     
@@ -29,14 +29,20 @@ final class NewsCell: UICollectionViewCell {
     
     override class func awakeFromNib() {
         super.awakeFromNib()
+
     }
     
-    func configure(avatar: UIImage,name: String, date: String, text: String, image: UIImage) {
-        newsAvatar.image = avatar
-        newsName.text = name
-        newsPostDate.text = date
-        newsText.text = text
-        newsImage.image = image
+    func configure(news: NewsModel) {
+        newsAvatar.image = news.avatar
+        newsName.text = news.name
+        newsPostDate.text = news.date
+        newsText.text = news.text
+        newsImage.image = news.image
+        
+        likeLabel.text = String(news.likes)
+        commentLabel.text = String(news.comments)
+        replyLabel.text = String(news.replies)
+        viewsLabel.text = String(news.views)
      }
 
 }

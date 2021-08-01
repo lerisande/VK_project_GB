@@ -24,11 +24,13 @@ final class FriendHeaderSection: UITableViewHeaderFooterView {
         setView()
     }
     
+    // исп. когда создаем в коде
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         setView()
     }
     
+    // исп. когда создаем в сториборде
     func configure(title: String?) {
         label.text = title
     }

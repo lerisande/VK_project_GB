@@ -14,6 +14,7 @@ struct FriendModel  {
     let avatar: UIImage
     var photoLibrary: [PhotoModel]
 
+    //сравниваем левое значение с правым значением (реализация протокола Comparable?)
 	static func == (lhs: FriendModel, rhs: FriendModel) -> Bool {
 		lhs.name == rhs.name
 	}
