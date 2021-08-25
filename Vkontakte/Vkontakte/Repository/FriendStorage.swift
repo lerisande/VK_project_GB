@@ -37,53 +37,29 @@ class FriendStorage {
 		[PhotoModel(image: UIImage(named:"woman1.1")!, isLiked: false, likeCount: 0),
 		 PhotoModel(image: UIImage(named:"woman1.2")!, isLiked: false, likeCount: 0),
 		 PhotoModel(image: UIImage(named:"woman1.3")!, isLiked: false, likeCount: 0),
-		 PhotoModel(image: UIImage(named:"woman1.4")!, isLiked: false, likeCount: 0),
-		 PhotoModel(image: UIImage(named:"woman1.1")!, isLiked: false, likeCount: 0),
-		 PhotoModel(image: UIImage(named:"woman1.2")!, isLiked: false, likeCount: 0),
-		 PhotoModel(image: UIImage(named:"woman1.3")!, isLiked: false, likeCount: 0),
-		 PhotoModel(image: UIImage(named:"woman1.4")!, isLiked: false, likeCount: 0)]
+		 PhotoModel(image: UIImage(named:"woman1.4")!, isLiked: false, likeCount: 0),]
     
     var friend2:[PhotoModel] =
 		[PhotoModel(image: UIImage(named:"man1.1")!, isLiked: false, likeCount: 0),
 		 PhotoModel(image: UIImage(named:"man1.2")!, isLiked: false, likeCount: 0),
 		 PhotoModel(image: UIImage(named:"man1.3")!, isLiked: false, likeCount: 0),
-		 PhotoModel(image: UIImage(named:"man1.4")!, isLiked: false, likeCount: 0),
-		 PhotoModel(image: UIImage(named:"man1.1")!, isLiked: false, likeCount: 0),
-		 PhotoModel(image: UIImage(named:"man1.2")!, isLiked: false, likeCount: 0),
-		 PhotoModel(image: UIImage(named:"man1.3")!, isLiked: false, likeCount: 0),
-		 PhotoModel(image: UIImage(named:"man1.4")!, isLiked: false, likeCount: 0)]
+		 PhotoModel(image: UIImage(named:"man1.4")!, isLiked: false, likeCount: 0),]
     
     var friend3:[PhotoModel] =
 		[PhotoModel(image: UIImage(named:"woman2.1")!, isLiked: false, likeCount: 0),
 		 PhotoModel(image: UIImage(named:"woman2.1")!, isLiked: false, likeCount: 0),
 		 PhotoModel(image: UIImage(named:"woman2.1")!, isLiked: false, likeCount: 0),
-		 PhotoModel(image: UIImage(named:"woman2.1")!, isLiked: false, likeCount: 0),
-		 PhotoModel(image: UIImage(named:"woman2.1")!, isLiked: false, likeCount: 0),
-		 PhotoModel(image: UIImage(named:"woman2.1")!, isLiked: false, likeCount: 0)]
+		 PhotoModel(image: UIImage(named:"woman2.1")!, isLiked: false, likeCount: 0),]
     
     var friend4:[PhotoModel] =
 		[PhotoModel(image: UIImage(named:"man2.1")!, isLiked: false, likeCount: 0),
-		 PhotoModel(image: UIImage(named:"man2.2")!, isLiked: false, likeCount: 0),
-		 PhotoModel(image: UIImage(named:"man2.1")!, isLiked: false, likeCount: 0),
-		 PhotoModel(image: UIImage(named:"man2.2")!, isLiked: false, likeCount: 0),
-		 PhotoModel(image: UIImage(named:"man2.1")!, isLiked: false, likeCount: 0),
-		 PhotoModel(image: UIImage(named:"man2.2")!, isLiked: false, likeCount: 0),
-		 PhotoModel(image: UIImage(named:"man2.1")!, isLiked: false, likeCount: 0),
-		 PhotoModel(image: UIImage(named:"man2.2")!, isLiked: false, likeCount: 0)]
+		 PhotoModel(image: UIImage(named:"man2.2")!, isLiked: false, likeCount: 0),]
     
     var friend5:[PhotoModel] =
 		[PhotoModel(image: UIImage(named:"man3.1")!, isLiked: false, likeCount: 0),
 		 PhotoModel(image: UIImage(named:"man3.2")!, isLiked: false, likeCount: 0),
 		 PhotoModel(image: UIImage(named:"man3.3")!, isLiked: false, likeCount: 0),
-		 PhotoModel(image: UIImage(named:"man3.4")!, isLiked: false, likeCount: 0),
-		 PhotoModel(image: UIImage(named:"man3.1")!, isLiked: false, likeCount: 0),
-		 PhotoModel(image: UIImage(named:"man3.2")!, isLiked: false, likeCount: 0),
-		 PhotoModel(image: UIImage(named:"man3.3")!, isLiked: false, likeCount: 0),
-		 PhotoModel(image: UIImage(named:"man3.4")!, isLiked: false, likeCount: 0),
-		 PhotoModel(image: UIImage(named:"man3.1")!, isLiked: false, likeCount: 0),
-		 PhotoModel(image: UIImage(named:"man3.2")!, isLiked: false, likeCount: 0),
-		 PhotoModel(image: UIImage(named:"man3.3")!, isLiked: false, likeCount: 0),
-		 PhotoModel(image: UIImage(named:"man3.4")!, isLiked: false, likeCount: 0)]
+		 PhotoModel(image: UIImage(named:"man3.4")!, isLiked: false, likeCount: 0),]
     
     var friend6:[PhotoModel] =
 		[PhotoModel(image: UIImage(named:"woman3.1")!, isLiked: false, likeCount: 0),
@@ -92,41 +68,16 @@ class FriendStorage {
 		 PhotoModel(image: UIImage(named:"woman3.4")!, isLiked: false, likeCount: 0),
 		 PhotoModel(image: UIImage(named:"woman3.5")!, isLiked: false, likeCount: 0),
 		 PhotoModel(image: UIImage(named:"woman3.6")!, isLiked: false, likeCount: 0),
-		 PhotoModel(image: UIImage(named:"woman3.7")!, isLiked: false, likeCount: 0),
-		 PhotoModel(image: UIImage(named:"woman3.1")!, isLiked: false, likeCount: 0),
-		 PhotoModel(image: UIImage(named:"woman3.2")!, isLiked: false, likeCount: 0),
-		 PhotoModel(image: UIImage(named:"woman3.3")!, isLiked: false, likeCount: 0),
-		 PhotoModel(image: UIImage(named:"woman3.4")!, isLiked: false, likeCount: 0),
-		 PhotoModel(image: UIImage(named:"woman3.5")!, isLiked: false, likeCount: 0),
-		 PhotoModel(image: UIImage(named:"woman3.6")!, isLiked: false, likeCount: 0),
-		 PhotoModel(image: UIImage(named:"woman3.7")!, isLiked: false, likeCount: 0),
-		 PhotoModel(image: UIImage(named:"woman3.1")!, isLiked: false, likeCount: 0),
-		 PhotoModel(image: UIImage(named:"woman3.2")!, isLiked: false, likeCount: 0),
-		 PhotoModel(image: UIImage(named:"woman3.3")!, isLiked: false, likeCount: 0),
-		 PhotoModel(image: UIImage(named:"woman3.4")!, isLiked: false, likeCount: 0),
-		 PhotoModel(image: UIImage(named:"woman3.5")!, isLiked: false, likeCount: 0),
-		 PhotoModel(image: UIImage(named:"woman3.6")!, isLiked: false, likeCount: 0),
-		 PhotoModel(image: UIImage(named:"woman3.7")!, isLiked: false, likeCount: 0)]
+		 PhotoModel(image: UIImage(named:"woman3.7")!, isLiked: false, likeCount: 0),]
     
     var friend7:[PhotoModel] =
 		[PhotoModel(image: UIImage(named:"man4.1")!, isLiked: false, likeCount: 0),
 		 PhotoModel(image: UIImage(named:"man4.2")!, isLiked: false, likeCount: 0),
 		 PhotoModel(image: UIImage(named:"man4.3")!, isLiked: false, likeCount: 0),
-		 PhotoModel(image: UIImage(named:"man4.4")!, isLiked: false, likeCount: 0),
-		 PhotoModel(image: UIImage(named:"man4.1")!, isLiked: false, likeCount: 0),
-		 PhotoModel(image: UIImage(named:"man4.2")!, isLiked: false, likeCount: 0),
-		 PhotoModel(image: UIImage(named:"man4.3")!, isLiked: false, likeCount: 0),
-		 PhotoModel(image: UIImage(named:"man4.4")!, isLiked: false, likeCount: 0),
-		 PhotoModel(image: UIImage(named:"man4.1")!, isLiked: false, likeCount: 0),
-		 PhotoModel(image: UIImage(named:"man4.2")!, isLiked: false, likeCount: 0),
-		 PhotoModel(image: UIImage(named:"man4.3")!, isLiked: false, likeCount: 0),
-		 PhotoModel(image: UIImage(named:"man4.4")!, isLiked: false, likeCount: 0)]
+		 PhotoModel(image: UIImage(named:"man4.4")!, isLiked: false, likeCount: 0),]
     
     var friend8:[PhotoModel] =
 		[PhotoModel(image: UIImage(named:"man5")!, isLiked: false, likeCount: 0),
 		 PhotoModel(image: UIImage(named:"man5")!, isLiked: false, likeCount: 0),
-		 PhotoModel(image: UIImage(named:"man5")!, isLiked: false, likeCount: 0),
-		 PhotoModel(image: UIImage(named:"man5")!, isLiked: false, likeCount: 0),
-		 PhotoModel(image: UIImage(named:"man5")!, isLiked: false, likeCount: 0),
-		 PhotoModel(image: UIImage(named:"man5")!, isLiked: false, likeCount: 0)]
+		 PhotoModel(image: UIImage(named:"man5")!, isLiked: false, likeCount: 0),]
 }

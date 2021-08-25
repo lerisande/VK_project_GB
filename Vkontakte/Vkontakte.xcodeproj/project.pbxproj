@@ -30,12 +30,17 @@
 		B19A9839269B08620026F060 /* FriendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19A9838269B08620026F060 /* FriendModel.swift */; };
 		B19A983B269B0D7A0026F060 /* FriendStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19A983A269B0D7A0026F060 /* FriendStorage.swift */; };
 		B19CE36D26B59B34006F574B /* CloudAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19CE36C26B59B34006F574B /* CloudAnimation.swift */; };
+		B1A3480726B835E900B18A80 /* CustomSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A3480626B835E900B18A80 /* CustomSegue.swift */; };
 		B1A8DF84269F526C00941A53 /* LikeControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A8DF83269F526C00941A53 /* LikeControl.swift */; };
 		B1CC6F6E26AAA391006EA51B /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CC6F6D26AAA391006EA51B /* NewsModel.swift */; };
 		B1CC6F7426AB0C0B006EA51B /* NewsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CC6F7326AB0C0B006EA51B /* NewsStorage.swift */; };
 		B1D6511826A9763F005304F6 /* GroupsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1D6511726A9763F005304F6 /* GroupsCell.xib */; };
 		B1D6511B26A97770005304F6 /* GroupsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D6511A26A97770005304F6 /* GroupsCell.swift */; };
 		B1D6511D26A99162005304F6 /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D6511C26A99162005304F6 /* PhotoModel.swift */; };
+		B1D7689E26BAAC0700C9B5FA /* CustomPushAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D7689D26BAAC0700C9B5FA /* CustomPushAnimator.swift */; };
+		B1D768A026BAAC2600C9B5FA /* CustomPopAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D7689F26BAAC2600C9B5FA /* CustomPopAnimator.swift */; };
+		B1D768A226BAAC5600C9B5FA /* CustomNavigatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D768A126BAAC5600C9B5FA /* CustomNavigatorController.swift */; };
+		B1D768A426BAAC6B00C9B5FA /* CustomInteractiveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D768A326BAAC6B00C9B5FA /* CustomInteractiveTransition.swift */; };
 		B1D9780326B6BD63002B0734 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D9780226B6BD63002B0734 /* BackgroundView.swift */; };
 		B1E113FD26A9BB260061AB6D /* FriendHeaderSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E113FC26A9BB260061AB6D /* FriendHeaderSection.swift */; };
 		B1E113FF26A9D5AF0061AB6D /* NewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1E113FE26A9D5AF0061AB6D /* NewsCell.xib */; };
@@ -67,12 +72,17 @@
 		B19A9838269B08620026F060 /* FriendModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendModel.swift; sourceTree = "<group>"; };
 		B19A983A269B0D7A0026F060 /* FriendStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendStorage.swift; sourceTree = "<group>"; };
 		B19CE36C26B59B34006F574B /* CloudAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudAnimation.swift; sourceTree = "<group>"; };
+		B1A3480626B835E900B18A80 /* CustomSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegue.swift; sourceTree = "<group>"; };
 		B1A8DF83269F526C00941A53 /* LikeControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeControl.swift; sourceTree = "<group>"; };
 		B1CC6F6D26AAA391006EA51B /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
 		B1CC6F7326AB0C0B006EA51B /* NewsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsStorage.swift; sourceTree = "<group>"; };
 		B1D6511726A9763F005304F6 /* GroupsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroupsCell.xib; sourceTree = "<group>"; };
 		B1D6511A26A97770005304F6 /* GroupsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsCell.swift; sourceTree = "<group>"; };
 		B1D6511C26A99162005304F6 /* PhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoModel.swift; sourceTree = "<group>"; };
+		B1D7689D26BAAC0700C9B5FA /* CustomPushAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPushAnimator.swift; sourceTree = "<group>"; };
+		B1D7689F26BAAC2600C9B5FA /* CustomPopAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPopAnimator.swift; sourceTree = "<group>"; };
+		B1D768A126BAAC5600C9B5FA /* CustomNavigatorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigatorController.swift; sourceTree = "<group>"; };
+		B1D768A326BAAC6B00C9B5FA /* CustomInteractiveTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInteractiveTransition.swift; sourceTree = "<group>"; };
 		B1D9780226B6BD63002B0734 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		B1E113FC26A9BB260061AB6D /* FriendHeaderSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendHeaderSection.swift; sourceTree = "<group>"; };
 		B1E113FE26A9D5AF0061AB6D /* NewsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsCell.xib; sourceTree = "<group>"; };
@@ -170,7 +180,6 @@
 			children = (
 				B19A9820269892130026F060 /* FriendsController.swift */,
 				B19A9822269893410026F060 /* FriendCell.swift */,
-				B1E113FC26A9BB260061AB6D /* FriendHeaderSection.swift */,
 			);
 			path = Friends;
 			sourceTree = "<group>";
@@ -228,6 +237,11 @@
 			isa = PBXGroup;
 			children = (
 				B19CE36C26B59B34006F574B /* CloudAnimation.swift */,
+				B1A3480626B835E900B18A80 /* CustomSegue.swift */,
+				B1D7689D26BAAC0700C9B5FA /* CustomPushAnimator.swift */,
+				B1D7689F26BAAC2600C9B5FA /* CustomPopAnimator.swift */,
+				B1D768A126BAAC5600C9B5FA /* CustomNavigatorController.swift */,
+				B1D768A326BAAC6B00C9B5FA /* CustomInteractiveTransition.swift */,
 			);
 			path = Customs;
 			sourceTree = "<group>";
@@ -237,6 +251,7 @@
 			children = (
 				B1A8DF83269F526C00941A53 /* LikeControl.swift */,
 				B1673B4726A467AC00B2C791 /* LettersControl.swift */,
+				B1E113FC26A9BB260061AB6D /* FriendHeaderSection.swift */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -324,9 +339,12 @@
 			files = (
 				B1D6511B26A97770005304F6 /* GroupsCell.swift in Sources */,
 				B12ADD24268F8136007B38AF /* LoginViewController.swift in Sources */,
+				B1D768A426BAAC6B00C9B5FA /* CustomInteractiveTransition.swift in Sources */,
 				B19A9839269B08620026F060 /* FriendModel.swift in Sources */,
 				B19A9825269894BA0026F060 /* MyGroupsController.swift in Sources */,
 				B19A9821269892130026F060 /* FriendsController.swift in Sources */,
+				B1D7689E26BAAC0700C9B5FA /* CustomPushAnimator.swift in Sources */,
+				B1D768A226BAAC5600C9B5FA /* CustomNavigatorController.swift in Sources */,
 				B12ADD10268F795A007B38AF /* AppDelegate.swift in Sources */,
 				B1CC6F6E26AAA391006EA51B /* NewsModel.swift in Sources */,
 				B1673B4826A467AC00B2C791 /* LettersControl.swift in Sources */,
@@ -338,6 +356,7 @@
 				B1A8DF84269F526C00941A53 /* LikeControl.swift in Sources */,
 				B1D9780326B6BD63002B0734 /* BackgroundView.swift in Sources */,
 				B11919B526B67FBF005977C6 /* MultiplePhotoNewsCell.swift in Sources */,
+				B1D768A026BAAC2600C9B5FA /* CustomPopAnimator.swift in Sources */,
 				B1E113FD26A9BB260061AB6D /* FriendHeaderSection.swift in Sources */,
 				B13FFC7126A6C8A600552B33 /* NewsCell.swift in Sources */,
 				B19A9823269893410026F060 /* FriendCell.swift in Sources */,
@@ -347,6 +366,7 @@
 				B19A982B2698955E0026F060 /* AllGroupsController.swift in Sources */,
 				B19A9837269AE9410026F060 /* GroupStorage.swift in Sources */,
 				B1D6511D26A99162005304F6 /* PhotoModel.swift in Sources */,
+				B1A3480726B835E900B18A80 /* CustomSegue.swift in Sources */,
 				B19A982F2698A2F60026F060 /* PhotoCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
