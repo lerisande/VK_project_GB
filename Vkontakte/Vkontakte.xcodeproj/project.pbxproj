@@ -19,6 +19,7 @@
 		B13FFC6E26A6C87F00552B33 /* NewsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13FFC6C26A6C87F00552B33 /* NewsController.swift */; };
 		B13FFC7126A6C8A600552B33 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13FFC7026A6C8A600552B33 /* NewsCell.swift */; };
 		B1673B4826A467AC00B2C791 /* LettersControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1673B4726A467AC00B2C791 /* LettersControl.swift */; };
+		B17618C926D6976300B12A51 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17618C826D6976300B12A51 /* Session.swift */; };
 		B19A9821269892130026F060 /* FriendsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19A9820269892130026F060 /* FriendsController.swift */; };
 		B19A9823269893410026F060 /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19A9822269893410026F060 /* FriendCell.swift */; };
 		B19A9825269894BA0026F060 /* MyGroupsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19A9824269894BA0026F060 /* MyGroupsController.swift */; };
@@ -29,7 +30,6 @@
 		B19A9837269AE9410026F060 /* GroupStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19A9836269AE9410026F060 /* GroupStorage.swift */; };
 		B19A9839269B08620026F060 /* FriendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19A9838269B08620026F060 /* FriendModel.swift */; };
 		B19A983B269B0D7A0026F060 /* FriendStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19A983A269B0D7A0026F060 /* FriendStorage.swift */; };
-		B19CE36D26B59B34006F574B /* CloudAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19CE36C26B59B34006F574B /* CloudAnimation.swift */; };
 		B1A3480726B835E900B18A80 /* CustomSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A3480626B835E900B18A80 /* CustomSegue.swift */; };
 		B1A8DF84269F526C00941A53 /* LikeControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A8DF83269F526C00941A53 /* LikeControl.swift */; };
 		B1CC6F6E26AAA391006EA51B /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CC6F6D26AAA391006EA51B /* NewsModel.swift */; };
@@ -61,6 +61,7 @@
 		B13FFC6C26A6C87F00552B33 /* NewsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsController.swift; sourceTree = "<group>"; };
 		B13FFC7026A6C8A600552B33 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 		B1673B4726A467AC00B2C791 /* LettersControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LettersControl.swift; sourceTree = "<group>"; };
+		B17618C826D6976300B12A51 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		B19A9820269892130026F060 /* FriendsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsController.swift; sourceTree = "<group>"; };
 		B19A9822269893410026F060 /* FriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
 		B19A9824269894BA0026F060 /* MyGroupsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupsController.swift; sourceTree = "<group>"; };
@@ -71,7 +72,6 @@
 		B19A9836269AE9410026F060 /* GroupStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupStorage.swift; sourceTree = "<group>"; };
 		B19A9838269B08620026F060 /* FriendModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendModel.swift; sourceTree = "<group>"; };
 		B19A983A269B0D7A0026F060 /* FriendStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendStorage.swift; sourceTree = "<group>"; };
-		B19CE36C26B59B34006F574B /* CloudAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudAnimation.swift; sourceTree = "<group>"; };
 		B1A3480626B835E900B18A80 /* CustomSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegue.swift; sourceTree = "<group>"; };
 		B1A8DF83269F526C00941A53 /* LikeControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeControl.swift; sourceTree = "<group>"; };
 		B1CC6F6D26AAA391006EA51B /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
@@ -118,6 +118,7 @@
 		B12ADD0E268F795A007B38AF /* Vkontakte */ = {
 			isa = PBXGroup;
 			children = (
+				B17618C826D6976300B12A51 /* Session.swift */,
 				B19CE36926B59ADD006F574B /* Customs */,
 				B12ADD25268F8DDC007B38AF /* AppDelegate */,
 				B12ADD26268F8DE6007B38AF /* Configuration */,
@@ -236,7 +237,6 @@
 		B19CE36926B59ADD006F574B /* Customs */ = {
 			isa = PBXGroup;
 			children = (
-				B19CE36C26B59B34006F574B /* CloudAnimation.swift */,
 				B1A3480626B835E900B18A80 /* CustomSegue.swift */,
 				B1D7689D26BAAC0700C9B5FA /* CustomPushAnimator.swift */,
 				B1D7689F26BAAC2600C9B5FA /* CustomPopAnimator.swift */,
@@ -356,12 +356,12 @@
 				B1A8DF84269F526C00941A53 /* LikeControl.swift in Sources */,
 				B1D9780326B6BD63002B0734 /* BackgroundView.swift in Sources */,
 				B11919B526B67FBF005977C6 /* MultiplePhotoNewsCell.swift in Sources */,
+				B17618C926D6976300B12A51 /* Session.swift in Sources */,
 				B1D768A026BAAC2600C9B5FA /* CustomPopAnimator.swift in Sources */,
 				B1E113FD26A9BB260061AB6D /* FriendHeaderSection.swift in Sources */,
 				B13FFC7126A6C8A600552B33 /* NewsCell.swift in Sources */,
 				B19A9823269893410026F060 /* FriendCell.swift in Sources */,
 				B19A983B269B0D7A0026F060 /* FriendStorage.swift in Sources */,
-				B19CE36D26B59B34006F574B /* CloudAnimation.swift in Sources */,
 				B19A982D2698A2E40026F060 /* FriendPhotosController.swift in Sources */,
 				B19A982B2698955E0026F060 /* AllGroupsController.swift in Sources */,
 				B19A9837269AE9410026F060 /* GroupStorage.swift in Sources */,

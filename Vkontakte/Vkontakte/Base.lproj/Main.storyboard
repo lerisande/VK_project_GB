@@ -478,6 +478,7 @@
                     <connections>
                         <outlet property="searchBar" destination="LQf-xa-VEj" id="Cbh-9u-bdA"/>
                         <outlet property="tableView" destination="zTB-pe-Ngw" id="df7-cz-FPC"/>
+                        <segue destination="bi0-sr-MZE" kind="unwind" identifier="addThisGroup" unwindAction="addGroup:" id="CrI-eV-q9U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AvV-wR-5bq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -589,7 +590,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="drN-V5-fMW"/>
+        <segue reference="ZVk-F3-hka"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="lock.fill" catalog="system" width="128" height="128"/>

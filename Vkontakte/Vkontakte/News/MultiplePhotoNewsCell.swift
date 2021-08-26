@@ -13,6 +13,8 @@ final class MultiplePhotoNewsCell: UITableViewCell {
     
     var index: Int = 0
     
+    // MARK: - Outlets
+    
     @IBOutlet var newsAvatar: UIImageView!
     @IBOutlet var newsName: UILabel!
     @IBOutlet var newsPostDate: UILabel!
@@ -42,6 +44,8 @@ final class MultiplePhotoNewsCell: UITableViewCell {
         super.awakeFromNib()
 
     }
+    
+    // MARK: - Cell configuration
     
     func configure(news: NewsModel) {
         newsAvatar.image = news.avatar

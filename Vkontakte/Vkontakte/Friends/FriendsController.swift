@@ -9,6 +9,8 @@ import UIKit
 
 final class FriendsController: UIViewController {
     
+    // MARK: - Outlets
+    
     @IBOutlet var tableView: UITableView!
     @IBOutlet var lettersControl: LettersControl!
     
@@ -77,6 +79,9 @@ final class FriendsController: UIViewController {
         }
     }
 }
+
+// MARK: - Extensions
+
 extension FriendsController: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
