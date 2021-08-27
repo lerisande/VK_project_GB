@@ -9,6 +9,8 @@ import UIKit
 
 final class LoginViewController: UIViewController {
     
+    // MARK: - Outlets
+
     @IBOutlet private weak var loginScrollView: UIScrollView!
     @IBOutlet private weak var logoImage: UIImageView!
     @IBOutlet private weak var loginLabel: UILabel!
@@ -20,39 +22,40 @@ final class LoginViewController: UIViewController {
     @IBAction func facebookLoginButton(_ sender: Any) {}
     @IBAction func appleLoginButton(_ sender: Any) {}
     
+    // MARK: - Life cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let currentSession = Session.shared
+        currentSession.token = "someToken"
+        currentSession.userId = 0
+        
         setViews()
+        logoAnimation()
         loadingAnimation()
         
-        // добавляем анимацию движения для логотипа
-        let positionAnimation = CABasicAnimation(keyPath: "position.x")
-        
-        positionAnimation.fromValue = logoImage.frame.origin.x
-        positionAnimation.toValue = logoImage.frame.origin.x + 150
-        positionAnimation.duration = 3
-        positionAnimation.beginTime = CACurrentMediaTime() + 1
-        positionAnimation.repeatCount = .infinity
-        positionAnimation.autoreverses = true
-        positionAnimation.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
-        
-        logoImage.layer.add(positionAnimation, forKey: nil)
-        
-        // прозрачность
-        let opacityAnimation = CABasicAnimation(keyPath: #keyPath(CALayer.opacity))
-        
-        opacityAnimation.fromValue = 1
-        opacityAnimation.toValue = 0.01
-        opacityAnimation.duration = 3
-        opacityAnimation.beginTime = CACurrentMediaTime() + 1
-        opacityAnimation.repeatCount = .infinity
-        opacityAnimation.autoreverses = true
-        opacityAnimation.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
-
-        logoImage.layer.add(opacityAnimation, forKey: nil)
-        
-        
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // Подписываемся на два уведомления: одно приходит при появлении клавиатуры
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWasShown), name: UIResponder.keyboardWillShowNotification, object: nil)
+        // Второе — когда она пропадает
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillBeHidden(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
+        navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    // MARK: - Loading animation
     
     private func loadingAnimation() {
 
@@ -98,22 +101,34 @@ final class LoginViewController: UIViewController {
                        completion: nil)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        // Подписываемся на два уведомления: одно приходит при появлении клавиатуры
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWasShown), name: UIResponder.keyboardWillShowNotification, object: nil)
-        // Второе — когда она пропадает
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillBeHidden(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
-        
-        navigationController?.setNavigationBarHidden(true, animated: true)
-    }
+    // MARK: - Logo animation
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
+    private func logoAnimation() {
+        // добавляем анимацию движения для логотипа
+        let positionAnimation = CABasicAnimation(keyPath: "position.x")
         
-        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+        positionAnimation.fromValue = logoImage.frame.origin.x
+        positionAnimation.toValue = logoImage.frame.origin.x + 150
+        positionAnimation.duration = 3
+        positionAnimation.beginTime = CACurrentMediaTime() + 1
+        positionAnimation.repeatCount = .infinity
+        positionAnimation.autoreverses = true
+        positionAnimation.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
+        
+        logoImage.layer.add(positionAnimation, forKey: nil)
+        
+        // прозрачность
+        let opacityAnimation = CABasicAnimation(keyPath: #keyPath(CALayer.opacity))
+        
+        opacityAnimation.fromValue = 1
+        opacityAnimation.toValue = 0.01
+        opacityAnimation.duration = 3
+        opacityAnimation.beginTime = CACurrentMediaTime() + 1
+        opacityAnimation.repeatCount = .infinity
+        opacityAnimation.autoreverses = true
+        opacityAnimation.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
+
+        logoImage.layer.add(opacityAnimation, forKey: nil)
     }
     
     
@@ -135,6 +150,8 @@ final class LoginViewController: UIViewController {
             present(alert, animated: true, completion: nil)
         }
     }
+    
+    // MARK: - Keyboard setups
     
     // Когда клавиатура появляется
     @objc private func keyboardWasShown(notification: Notification) {

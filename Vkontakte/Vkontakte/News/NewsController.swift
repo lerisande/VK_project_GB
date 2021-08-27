@@ -9,10 +9,14 @@ import UIKit
 
 class NewsController: UIViewController {
     
+    // MARK: - Outlets
+    
     @IBOutlet var tableView: UITableView!
     
     var news = [NewsModel]()
 
+    // MARK: - Life cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,12 +30,12 @@ class NewsController: UIViewController {
 
     }
 }
+// MARK: - Extension
 
 extension NewsController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         news.count
-        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

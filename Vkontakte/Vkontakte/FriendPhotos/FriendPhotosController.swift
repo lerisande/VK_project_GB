@@ -38,6 +38,8 @@ final class FriendPhotosController: UIViewController {
     }
 }
 
+// MARK: - Extensions
+
 extension FriendPhotosController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

@@ -9,6 +9,8 @@ import UIKit
 
 final class MyGroupsController: UIViewController {
     
+    // MARK: - Outlets
+    
     @IBOutlet private var tableView: UITableView!
     @IBOutlet var searchBar: UISearchBar!
     
@@ -38,18 +40,17 @@ final class MyGroupsController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "addGroup" {
-            segue.destination.title = "Мои группы"
+//            segue.destination.title = "Мои группы"
         }
     }
     
     @IBAction func addGroup(_ segue: UIStoryboardSegue){
         guard
-            segue.identifier == "addGroup",
+            segue.identifier == "addThisGroup",
             let sourceController = segue.source as? AllGroupsController,
             let indexPath = sourceController.tableView.indexPathForSelectedRow
-        else {
-            return
-        }
+        else { return }
+        
         let group = sourceController.groups[indexPath.row]
         
         if !groups.contains(where: {$0.name == group.name}) {
@@ -58,6 +59,8 @@ final class MyGroupsController: UIViewController {
         }
     }
 }
+
+// MARK: - Extensions
 
 extension MyGroupsController: UITableViewDataSource {
     

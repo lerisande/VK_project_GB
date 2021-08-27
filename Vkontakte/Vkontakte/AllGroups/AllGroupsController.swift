@@ -10,6 +10,8 @@ import Foundation
 
 final class AllGroupsController: UIViewController {
     
+    // MARK: - Outlets
+    
     @IBOutlet var tableView: UITableView!
     @IBOutlet var searchBar: UISearchBar!
     
@@ -38,6 +40,8 @@ final class AllGroupsController: UIViewController {
     }
 }
 
+// MARK: - Extensions
+
 extension AllGroupsController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -60,10 +64,12 @@ extension AllGroupsController: UITableViewDataSource {
     }
 }
 
+
 extension AllGroupsController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+        print("Нажата строка № \(indexPath.row) в секции \(indexPath.section)")
+        //tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 

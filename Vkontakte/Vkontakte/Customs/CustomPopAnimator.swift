@@ -39,8 +39,5 @@ class CustomPopAnimator: NSObject, UIViewControllerAnimatedTransitioning {
             }
             transitionContext.completeTransition(finished && !transitionContext.transitionWasCancelled)
         }
-
     }
-    
-    
 }

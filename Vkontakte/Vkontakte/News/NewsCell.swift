@@ -11,6 +11,8 @@ final class NewsCell: UITableViewCell {
     
     static let reuseIdentifier = "NewsCell"
     
+    // MARK: - Outlets
+    
     @IBOutlet var newsAvatar: UIImageView!
     @IBOutlet var newsName: UILabel!
     @IBOutlet var newsPostDate: UILabel!
@@ -29,8 +31,9 @@ final class NewsCell: UITableViewCell {
     
     override class func awakeFromNib() {
         super.awakeFromNib()
-
     }
+    
+    // MARK: - Cell configuration
     
     func configure(news: NewsModel) {
         newsAvatar.image = news.avatar
