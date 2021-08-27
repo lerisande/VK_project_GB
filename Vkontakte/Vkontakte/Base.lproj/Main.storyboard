@@ -365,7 +365,7 @@
                                         <size key="customSize" width="150" height="150"/>
                                         <connections>
                                             <outlet property="friendPhoto" destination="gHm-y1-gRg" id="hfx-fy-gCb"/>
-                                            <segue destination="zId-N9-xau" kind="push" identifier="showScaledPhoto" id="ZVk-F3-hka">
+                                            <segue destination="zId-N9-xau" kind="show" identifier="showScaledPhoto" id="ZVk-F3-hka">
                                                 <segue key="commit" inheritsFrom="parent" id="hM4-fZ-gE2"/>
                                                 <segue key="preview" inheritsFrom="commit" id="drN-V5-fMW"/>
                                             </segue>
