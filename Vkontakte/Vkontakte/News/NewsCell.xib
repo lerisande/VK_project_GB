@@ -45,7 +45,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zs1-bM-J8p">
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zs1-bM-J8p">
                         <rect key="frame" x="36" y="95" width="343" height="151"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>

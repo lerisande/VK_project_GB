@@ -11,11 +11,15 @@ final class FriendPhotosController: UIViewController {
     
     @IBOutlet var collectionView: UICollectionView!
     
+    let photosAPI = PhotosAPI()
+    
     var friend: FriendModel?
     var selectedItem: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        photosAPI.getPhotos { photos in }
         
         self.title = friend?.name
         

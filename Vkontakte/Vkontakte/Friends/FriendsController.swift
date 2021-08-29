@@ -14,11 +14,15 @@ final class FriendsController: UIViewController {
     @IBOutlet var tableView: UITableView!
     @IBOutlet var lettersControl: LettersControl!
     
+    let friendsAPI = FriendsAPI()
+    
     var friendsSection = [[FriendModel]]() //массив массивов
     private var firstLetters: [String] = []
     
     override func viewDidLoad() { 
         super.viewDidLoad()
+        
+        friendsAPI.getFriends { friends in }
         
         let friends = FriendStorage().friends.sorted(by: { $0.name < $1.name })
         firstLetters = getFirstLetters(friends)
