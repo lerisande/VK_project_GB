@@ -15,6 +15,8 @@ final class AllGroupsController: UIViewController {
     @IBOutlet var tableView: UITableView!
     @IBOutlet var searchBar: UISearchBar!
     
+    let searchGroupsAPI = SearchGroupsAPI()
+    
     var groups: [GroupModel] = [] {
         didSet {
             groupsDuplicate = groups
@@ -25,6 +27,8 @@ final class AllGroupsController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        searchGroupsAPI.getSearchGroups { searchGroups in }
         
         groups = GroupStorage().allGroups
         
